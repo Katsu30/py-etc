@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Member{% endblock title %}
+{% block content %}
+  <ul>
+    {% for member in members %}
+      <li>
+        <a href="{{ url_for('detail', user_id = member.id) }}">
+          {{ member.name   }} ({{ member.age }})
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock content %}

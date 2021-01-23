@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block title %}Member{% endblock title %}
+{% block content %}
+  <h1>{{ user_data.name }}さん</h1>
+  <img src="{{ url_for('static', filename=user_data.path) }}">
+{% endblock content %}
