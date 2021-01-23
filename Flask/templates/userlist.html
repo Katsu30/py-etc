@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask page</title>
+  </head>
+  <body>
+    <h1>This is UserList page</h1>
+    {% for user in users %}
+      <p>{{ user }}</p>
+    {% endfor %}
+    {% if 'Taro' in users %}
+      <p>Taroはリスト内に存在します</p>
+    {% endif %}
+  </body>
+</html>
