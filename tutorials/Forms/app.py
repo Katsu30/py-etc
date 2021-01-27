@@ -45,11 +45,11 @@ def home():
 def upload():
   if request.method == 'GET':
     return render_template('upload.html')
-  elif request.methodd == 'POST':
+  elif request.method == 'POST':
     file = request.files['file']
     save_filename = secure_filename(file.filename)
     file.save(os.path.join('./static/image', save_filename))
-    return redirect(url_for('upload_file', filename = save_filename))
+    return redirect(url_for('uploaded_file', filename = save_filename))
 
 @app.route('/upload_file<string:filename>')
 def uploaded_file(filename):
