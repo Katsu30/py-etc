@@ -51,7 +51,7 @@ def upload():
     file.save(os.path.join('./static/image', save_filename))
     return redirect(url_for('uploaded_file', filename = save_filename))
 
-@app.route('/upload_file<string:filename>')
+@app.route('/uploaded_file/<string:filename>')
 def uploaded_file(filename):
   return render_template('uploaded_file.html', filename = filename)
 
